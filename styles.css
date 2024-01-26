@@ -4,8 +4,9 @@ body {
 
 #text {
     background-color: #b2e1ff;
-    color: #ffffff;
+    color: #4f3f3e;
     padding: 10px;
+    font-family: 'Almendra SC', serif;
 }
 
 #game {
