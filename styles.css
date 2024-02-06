@@ -57,6 +57,12 @@ button {
     justify-content: space-evenly;
 }
 
-.images {
+#images {
 text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+    img {
+        width:100%
+    }
 }
