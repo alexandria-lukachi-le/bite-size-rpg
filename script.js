@@ -16,6 +16,14 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
+/*const images = [
+    "townSquare.JPG",
+    "shop.jpg",
+    "slimeMob.GIF",
+    "fangMob.GIF",
+    "bossDragon"
+];*/
+
 const weapons = [
     { name: 'stick', power: 5 },
     { name: 'dagger', power: 30 },
@@ -39,12 +47,13 @@ const weapons = [
       health: 300
     }
   ]
+
   const locations = [
     {
       name: "town square",
       "button text": ["Go to store", "Go to cave", "Fight dragon"],
       "button functions": [goStore, goCave, fightDragon],
-      text: "You are in the town square. You see a sign that says \"Store\"."
+      text: "You are in the town square. You see a sign that says \"Store\".",
     },
     {
       name: "store",
@@ -56,7 +65,7 @@ const weapons = [
       name: "cave",
       "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
       "button functions": [fightSlime, fightBeast, goTown],
-      text: "You enter the cave. You see some monsters."
+      text: "You enter the cave. You see some monsters.",
     },
     {
       name: "fight",
@@ -280,4 +289,8 @@ const weapons = [
         lose();
       }
     }
+  }
+
+  function getImage() {
+
   }
