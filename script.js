@@ -16,13 +16,19 @@ const goldText = document.querySelector("#goldText");
 const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
-/*const images = [
-    "townSquare.JPG",
-    "shop.jpg",
-    "slimeMob.GIF",
-    "fangMob.GIF",
-    "bossDragon"
-];*/
+const imageLinks = {
+    'town': 'assets/townSquare.JPG',
+    'store': 'assets/shop.jpg',
+    'slime': 'assets/slimeMob.GIF',
+    'fang': 'assets/fangMob.GIF',
+    'dragon': 'assets/bossDragon.GIF'
+};
+
+const switchImage = (background) => {
+  const image = document.getElementById('background-image');
+  image.src = imageLinks[background];
+}
+
 
 const weapons = [
     { name: 'stick', power: 5 },
@@ -116,10 +122,12 @@ const weapons = [
 
   function goTown() {
     update(locations[0]);
+    switchImage('town');
   }
   
   function goStore() {
     update(locations[1]);
+    switchImage('store');
   }
   
   function goCave() {
@@ -172,16 +180,19 @@ const weapons = [
   function fightSlime() {
     fighting = 0;
     goFight();
+    switchImage('slime');
   }
   
   function fightBeast() {
     fighting = 1;
     goFight();
+    switchImage('fang');
   }
   
   function fightDragon() {
     fighting = 2;
     goFight();
+    switchImage('dragon');
   }
   
   function goFight() {
