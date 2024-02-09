@@ -73,7 +73,7 @@ const weapons = [
       name: "cave",
       "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
       "button functions": [fightSlime, fightBeast, goTown],
-      text: "You enter the cave. You see some monsters.",
+      text: "You enter the cave. You see some monsters. Slime might be easy pickings...",
     },
     {
       name: "fight",
@@ -85,7 +85,7 @@ const weapons = [
       name: "kill monster",
       "button text": ["Go to town square", "Go to town square", "Go to town square"],
       "button functions": [goTown, goTown, easterEgg],
-      text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
+      text: 'You have defeated the monster. You gain experience points and find gold.'
     },
     {
       name: "lose",
@@ -103,7 +103,7 @@ const weapons = [
       name: "easter egg",
       "button text": ["2", "8", "Go to town square?"],
       "button functions": [pickTwo, pickEight, goTown],
-      text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
+      text: "You find a strange merchant willing to play a game. He says ten numbers will be randomly chosen. If the number you choose matches one of the random numbers, you might get something."
     }
   ];
 
@@ -293,11 +293,11 @@ const weapons = [
       text.innerText += numbers[i] + "\n";
     }
     if (numbers.includes(guess)) {
-      text.innerText += "Right! You win 20 gold!";
+      text.innerText += "The merchant says you've won. He gives you 20 gold!";
       gold += 20;
       goldText.innerText = gold;
     } else {
-      text.innerText += "Wrong! You lose 10 health!";
+      text.innerText += "The merchant says you lose...he gives you a smack on the head with a stick. Mind your health...";
       health -= 10;
       healthText.innerText = health;
       if (health <= 0) {
