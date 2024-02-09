@@ -93,13 +93,13 @@ const weapons = [
       name: "lose",
       "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
       "button functions": [restart, restart, restart],
-      text: "You die. ☠️"
+      text: "You die."
     },
     { 
       name: "win", 
       "button text": ["REPLAY?", "REPLAY?", "REPLAY?"], 
       "button functions": [restart, restart, restart], 
-      text: "You defeat the dragon! YOU WIN THE GAME! 🎉" 
+      text: "You have defeated the dragon! You've won the game and found your cat!" 
     },
     {
       name: "easter egg",
