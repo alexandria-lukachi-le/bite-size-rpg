@@ -17,11 +17,13 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const imageLinks = {
-    'town': 'assets/townSquare.JPG',
+    'town': 'assets/townSquareSign.jpg',
     'store': 'assets/shop.jpg',
+    'cave': 'assets/caveEntry.jpg',
     'slime': 'assets/slimeMob.GIF',
     'fang': 'assets/fangMob.GIF',
-    'dragon': 'assets/bossDragon.GIF'
+    'dragon': 'assets/bossDragon.GIF',
+    'surprise':'assets/easterEgg.gif'
 };
 
 const switchImage = (background) => {
@@ -132,6 +134,7 @@ const weapons = [
   
   function goCave() {
     update(locations[2]);
+    switchImage('cave');
   }
 
   function buyHealth() {
@@ -269,6 +272,7 @@ const weapons = [
   
   function easterEgg() {
     update(locations[7]);
+    switchImage('surprise');
   }
   
   function pickTwo() {
@@ -300,8 +304,4 @@ const weapons = [
         lose();
       }
     }
-  }
-
-  function getImage() {
-
   }
