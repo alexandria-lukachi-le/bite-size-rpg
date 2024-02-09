@@ -2,6 +2,11 @@ body {
     background-color: #272330;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+}
+
 #text {
     background-color: #272330;
     color: #ffffff;
@@ -12,7 +17,7 @@ body {
 
 #game {
     max-width: 500px;
-    max-height: 400px;
+    max-height: 650px;
     background-color: #ffffff;
     color: #ffffff;
     margin: 30px auto 0px;
@@ -20,10 +25,15 @@ body {
     border-radius: 10px;
 }
 
-#controls, 
+#controls {
+    padding: 15px;
+    color: #4f3f3e;
+}
+ 
 #stats {
-    border: 1px solid #272330;
-    padding: 5px;
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 15px;
     color: #4f3f3e;
 }
 
@@ -69,6 +79,7 @@ background-size: 400px 250px;
 img {
     border-radius: 5px;
 }
+
 
 @media only screen and (max-width: 480px) {
     img {
