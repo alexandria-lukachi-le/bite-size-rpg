@@ -17,13 +17,15 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const imageLinks = {
-    'town': 'assets/townSquareSign.jpg',
-    'store': 'assets/shop.jpg',
+    'town': 'assets/idleScene.GIF',
+    'store': 'assets/shop.GIF',
     'cave': 'assets/caveEntry.jpg',
-    'slime': 'assets/slimeMob.GIF',
-    'fang': 'assets/fangMob.GIF',
+    'slime': 'assets/slimeFight.GIF',
+    'fang': 'assets/fangFight.GIF',
     'dragon': 'assets/bossDragon.GIF',
-    'surprise':'assets/easterEgg.gif'
+    'surprise':'assets/easterEgg.GIF',
+    'victory': 'assets/victoryScene.GIF',
+    'defeat':'assets/defeatScene.GIF'
 };
 
 const switchImage = (background) => {
@@ -252,10 +254,13 @@ const weapons = [
   
   function lose() {
     update(locations[5]);
+    switchImage('defeat');
   }
   
   function winGame() {
     update(locations[6]);
+    switchImage('victory');
+
   }
   
   function restart() {
